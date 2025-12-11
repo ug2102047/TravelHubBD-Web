@@ -1,0 +1,195 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    color: #1e3a8a;
+}
+
+/* Bookings Container */
+.my-bookings-page-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #ffffff, #eff6ff);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.my-bookings-page-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.my-bookings-page-container h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.my-bookings-page-container h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Booking Card */
+.booking-entry-card {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-left: 6px solid #3b82f6;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    padding: 30px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.booking-entry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.booking-entry-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: #1e3a8a;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.booking-entry-card h3 .booking-id {
+    font-size: 0.85em;
+    color: #64748b;
+    float: right;
+}
+
+.booking-entry-card p {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.booking-entry-card strong {
+    color: #1e3a8a;
+    min-width: 160px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+/* Booking Status */
+.booking-status-tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending {
+    background: linear-gradient(135deg, #f97316, #fb923c);
+}
+
+.status-confirmed {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.status-failed {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+}
+
+.status-cancelled {
+    background: linear-gradient(135deg, #6b7280, #9ca3af);
+}
+
+/* No Bookings Info */
+.no-bookings-info {
+    text-align: center;
+    font-size: 1.3em;
+    color: #334155;
+    padding: 50px 25px;
+    background: #f0f4f8;
+    border-radius: 12px;
+    border: 1px dashed #bfdbfe;
+}
+
+.no-bookings-info a {
+    color: #3b82f6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.no-bookings-info a:hover {
+    text-decoration: underline;
+}
+
+/* Pending Verification */
+.pending-verification-note {
+    font-size: 0.95em;
+    color: #64748b;
+    margin-top: 8px;
+    display: block;
+    font-style: italic;
+}
+
+/* Booking Date Info */
+.booking-date-info {
+    font-size: 0.95em;
+    color: #64748b;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Cancel Button */
+.cancel-booking-btn {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.cancel-booking-btn:hover {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-booking-btn .fas {
+    margin-right: 8px;
+}
+
+/* Actions Container */
+.actions-container {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .my-bookings-page-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .my-bookings-page-container h2 {
+        font-size: 2em;
+    }
+}

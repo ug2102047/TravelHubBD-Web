@@ -1,0 +1,168 @@
+/* =================================================================
+ * CSS for the Booking Confirmation Page (booking_confirmation.php)
+ * Final version with updated button color.
+ * ================================================================= */
+
+/* --- Base & Page Layout --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.confirmation-page-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Main Heading --- */
+.confirmation-page-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1e3a8a;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.confirmation-page-container h2 .fa-check-circle {
+    color: #10b981; /* Green accent for success icon */
+}
+
+/* --- Confirmation Message Box --- */
+.confirmation-message {
+    background-color: #f0fdf4; /* Light green background */
+    color: #15803d;
+    border: 1px solid #86efac;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.confirmation-message strong {
+    color: #14532d;
+}
+
+/* --- Booking Details Summary Card --- */
+.booking-details-summary {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.booking-details-summary h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: #1e3a8a;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.booking-details-summary p {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 1em;
+}
+.booking-details-summary p:last-of-type {
+    border-bottom: none;
+}
+
+.booking-details-summary p strong {
+    color: #334155;
+    font-weight: 600;
+}
+
+/* --- Status Tag Styling --- */
+.booking-status-display {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+}
+.status-pending { background-color: #f59e0b; }
+.status-confirmed { background-color: #10b981; }
+.status-failed { background-color: #ef4444; }
+.status-cancelled { background-color: #64748b; }
+
+
+/* --- Action Buttons (New Design) --- */
+.page-actions {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.page-actions .btn-primary {
+    padding: 14px 28px;
+    font-size: 1.05em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page-actions .btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- MODIFIED: Primary Button Style (Green) --- */
+.page-actions .btn-primary:not(.btn-secondary) {
+    background: linear-gradient(135deg, #10b981, #34d399); /* Changed to green */
+    color: #ffffff;
+}
+.page-actions .btn-primary:not(.btn-secondary):hover {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+/* Secondary Button Style (Light Gray / Outline) */
+.page-actions .btn-secondary {
+    background-color: #f1f5f9;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+.page-actions .btn-secondary:hover {
+    background-color: #e2e8f0;
+    border-color: #cbd5e1;
+    color: #1e3a8a;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .confirmation-page-container {
+        padding: 25px;
+        margin: 30px 15px;
+    }
+    .confirmation-page-container h2 {
+        font-size: 2em;
+    }
+    .page-actions {
+        flex-direction: column;
+    }
+}

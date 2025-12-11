@@ -1,0 +1,234 @@
+/* =================================================================
+ * CSS for the Hotel Details Page (hotel_details.php)
+ * Final version with professional review section and uniform gallery.
+ * ================================================================= */
+
+/* --- Base & Page Layout --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.hotel-details-page {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Main Header --- */
+.hotel-main-header {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.hotel-main-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: #1e3a8a;
+    margin: 0;
+}
+
+.hotel-main-header .location {
+    font-size: 1.2em;
+    color: #475569;
+    margin: 10px 0;
+}
+
+.header-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.star-rating-display.large { color: #f59e0b; }
+.guest-rating.large strong { color: #1e3a8a; }
+
+/* --- Two-Column Layout --- */
+.details-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+}
+
+/* --- Base Card Style for Sections --- */
+.card-style {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.card-style h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eef2f7;
+}
+.card-style h2 .fas {
+    color: #3b82f6;
+}
+
+/* --- IMAGE GALLERY (Standard & Uniform Size) --- */
+.image-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+.image-gallery-grid a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    aspect-ratio: 4 / 3;
+}
+.image-gallery-grid a:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.image-gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.image-gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Description & Amenities --- */
+.hotel-description-section p { line-height: 1.8; text-align: justify; }
+.amenities-list { list-style: none; padding: 0; columns: 2; column-gap: 40px; }
+.amenities-list li { padding: 8px 0; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.amenities-list .fa-check-circle { color: #10b981; font-size: 1.2em; }
+
+/* --- Room Types Section --- */
+.room-types-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+.room-card { display: flex; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s ease, transform 0.3s ease; }
+.room-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); }
+.room-image-container { flex: 0 0 220px; }
+.room-image { width: 100%; height: 100%; object-fit: cover; }
+.room-details { padding: 20px 25px; flex-grow: 1; display: flex; flex-direction: column; }
+.room-details h3 { margin: 0 0 8px; font-size: 1.4em; }
+.room-price { font-size: 1.3em; font-weight: 700; color: #10b981; margin-bottom: 10px; }
+.room-capacity, .room-beds { color: #475569; font-size: 0.9em; margin-bottom: 5px; }
+.room-details .btn-book-room { margin-top: auto; padding: 10px 20px; background-color: #3b82f6; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; text-align: center; transition: background-color 0.3s; }
+.room-details .btn-book-room:hover { background-color: #2563eb; }
+
+/* --- NEW & FINAL REVIEW SECTION DESIGN --- */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between review cards */
+}
+.review-item {
+    background-color: #fff;
+    border: 1px solid #eef2f7;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    transition: box-shadow .3s ease;
+}
+.review-item:hover{
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+.review-avatar {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.review-content {
+    flex-grow: 1;
+}
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.review-author-details {
+    display: flex;
+    flex-direction: column;
+}
+.review-author {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #1e3a8a;
+}
+.review-date {
+    font-size: 0.85em;
+    color: #64748b;
+}
+.review-rating { color: #f59e0b; }
+.review-rating .fa-star { color: #e2e8f0; }
+.review-rating .filled { color: #f59e0b; }
+.review-comment {
+    margin-top: 10px;
+    line-height: 1.7;
+    font-size: 0.95em;
+    color: #334155;
+    text-align: justify;
+}
+/* Add Review Form */
+.add-review-form {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #eef2f7;
+}
+
+/* --- Sidebar Section --- */
+.hotel-sidebar .card-style { padding: 25px; }
+.booking-widget h3 { font-size: 1.6em; text-align: center; border: none; padding: 0; }
+.sidebar-price { text-align: center; margin: 10px 0 20px; font-size: 1.1em; }
+.sidebar-price strong { font-size: 1.8em; font-weight: 700; color: #10b981; }
+.btn-block { display: block; width: 100%; text-align: center; border-radius: 12px; text-decoration: none; color: #fff; transition: all 0.3s; }
+.btn-primary.btn-block { padding: 14px; font-size: 1.1em; font-weight: 600; background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+.btn-primary.btn-block:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3); }
+.btn-wishlist-sidebar { background-color: #f1f5f9; color: #ef4444; border: 1px solid #e2e8f0; margin-top: 15px; padding: 12px; font-size: 1em; font-weight: 600; }
+.btn-wishlist-sidebar:hover { background-color: #fee2e2; border-color: #fca5a5; }
+.contact-info h3 { font-size: 1.4em; }
+.contact-info p { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.contact-info .fas { color: #3b82f6; width: 20px; }
+.contact-info a { color: #1e3a8a; text-decoration: none; font-weight: 500; }
+.contact-info a:hover { text-decoration: underline; }
+.map-widget iframe { border-radius: 12px; }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+    .details-content-wrapper { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .amenities-list { columns: 1; }
+    .room-card { flex-direction: column; }
+    .room-image-container { flex-basis: 200px; }
+    .review-item {flex-direction: column; gap: 15px; text-align: center;}
+    .review-header {flex-direction: column; gap: 10px; text-align: center;}
+}

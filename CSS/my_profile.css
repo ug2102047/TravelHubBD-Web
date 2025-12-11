@@ -1,0 +1,173 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    color: #1e3a8a;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #ffffff, #eff6ff);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.profile-container h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.profile-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #3b82f6;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 5px solid #10b981;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+    background: #f0f8ff;
+}
+
+.form-group input[readonly] {
+    background: #f0f4f8;
+    cursor: not-allowed;
+}
+
+/* Update Button */
+.btn-update-profile {
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: #ffffff;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-update-profile:hover {
+    background: linear-gradient(135deg, #059669, #10b981);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Message Area */
+.message-area {
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    font-size: 1.05em;
+    text-align: left;
+}
+
+.message-area.success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.message-area.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f97316;
+}
+
+.message-area ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 8px;
+}
+
+.message-area ul li {
+    margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .profile-container h2 {
+        font-size: 2em;
+    }
+
+    .profile-section h3 {
+        font-size: 1.6em;
+    }
+}

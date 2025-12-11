@@ -1,0 +1,208 @@
+/*
+ * CSS for the My Wishlist Page (wishlist2.php)
+ * Consistent with the main site theme.
+*/
+
+/* Main Page Container */
+.wishlist-page-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.wishlist-page-container > h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.wishlist-page-container > h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ef4444, #f97316); /* Red/Orange gradient for wishlist */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Section for Hotels and Spots */
+.wishlist-section {
+    margin-bottom: 50px;
+}
+
+.wishlist-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 4px solid #10b981; /* Green accent */
+}
+
+/* Grid for Wishlist Items */
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Wishlist Card */
+.wishlist-item-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishlist-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(239, 68, 68, 0.15); /* Reddish shadow on hover */
+}
+
+/* Card Image */
+.wishlist-item-image {
+    height: 240px;
+    overflow: hidden;
+}
+
+.wishlist-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.wishlist-item-card:hover .wishlist-item-image img {
+    transform: scale(1.1);
+}
+
+/* Card Info Section */
+.wishlist-item-info {
+    padding: 20px 25px;
+    flex-grow: 1; /* Pushes action buttons to the bottom */
+}
+
+.wishlist-item-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+.wishlist-item-info p {
+    font-size: 0.95em;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wishlist-item-info p .fas {
+    color: #3b82f6; /* Blue icon color */
+}
+
+/* Reusing star rating style from all_hotels.css */
+.star-rating-display {
+    margin-top: 10px;
+}
+.star-rating-display .fa-star {
+    color: #e2e8f0;
+}
+.star-rating-display .filled {
+    color: #f59e0b;
+}
+
+/* Action Buttons */
+.wishlist-item-actions {
+    padding: 15px 25px;
+    display: flex;
+    gap: 15px;
+    background-color: #f8fafc;
+    border-top: 1px solid #eef2f7;
+}
+
+.wishlist-item-actions a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.95em;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-view-item {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+.btn-view-item:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-remove-wishlist {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+}
+.btn-remove-wishlist:hover {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Message for empty wishlist */
+.no-items-message {
+    background-color: #eef2ff;
+    border: 1px solid #c7d2fe;
+    color: #4338ca;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* General Message Area for success/error alerts */
+.message-area {
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto 25px auto;
+    border-radius: 12px;
+    max-width: 800px;
+    font-weight: 500;
+}
+.message-area.success {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+.message-area.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .wishlist-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+@media (max-width: 480px) {
+    .wishlist-page-container > h2 {
+        font-size: 2.2em;
+    }
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,187 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    color: #1e3a8a;
+}
+
+/* Support Ticket Container */
+.support-ticket-container {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #ffffff, #eff6ff);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.support-ticket-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.support-ticket-container h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.support-ticket-container h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Ticket Thread */
+.ticket-thread {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ticket-thread:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ticket-submission-header {
+    background: linear-gradient(145deg, #f0f4f8, #dbeafe);
+    padding: 20px;
+    border-bottom: 1px solid #bfdbfe;
+    border-radius: 16px 16px 0 0;
+}
+
+.ticket-submission-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: #1e3a8a;
+    margin: 0 0 8px 0;
+}
+
+.ticket-submission-header .meta-info {
+    font-size: 0.95em;
+    color: #334155;
+}
+
+.ticket-submission-header .meta-info strong {
+    color: #1e3a8a;
+}
+
+/* Message Content */
+.message-content {
+    padding: 25px;
+}
+
+.message-content.client-message {
+    border-left: 5px solid #3b82f6;
+    background: #f0f8ff;
+}
+
+.message-content.admin-reply {
+    border-left: 5px solid #10b981;
+    background: #ecfdf5;
+    margin-top: 20px;
+}
+
+.message-content p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.message-content .author {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.message-content .timestamp {
+    font-size: 0.9em;
+    color: #64748b;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* Status Tags */
+.status-tag-ticket {
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-new {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.status-read {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.status-replied {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+}
+
+.status-closed {
+    background: linear-gradient(135deg, #6b7280, #9ca3af);
+}
+
+/* No Tickets Message */
+.no-tickets-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #334155;
+    padding: 25px;
+    background: #f0f4f8;
+    border-radius: 12px;
+    border: 1px solid #bfdbfe;
+}
+
+.no-tickets-message a {
+    color: #3b82f6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.no-tickets-message a:hover {
+    text-decoration: underline;
+}
+
+/* Action Bar */
+.action-bar {
+    padding: 15px 25px;
+    text-align: right;
+    border-top: 1px solid #e2e8f0;
+    background: #f0f4f8;
+    border-radius: 0 0 16px 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .support-ticket-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .support-ticket-container h2 {
+        font-size: 2em;
+    }
+}

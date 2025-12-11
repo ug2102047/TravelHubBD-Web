@@ -1,0 +1,104 @@
+/*
+ * CSS for the main Hotel Search Form page (hotel_search.php)
+ * Consistent with the overall site theme.
+*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+}
+
+.hotel-search-form-container {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-search-form-container h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hotel-search-form-container p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #334155;
+    font-size: 1.1em;
+}
+
+.form-group-search {
+    margin-bottom: 25px;
+}
+
+.form-group-search label {
+    display: block;
+    font-weight: 600;
+    font-size: 1em;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.form-group-search input[type="text"],
+.form-group-search select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group-search input[type="text"]:focus,
+.form-group-search select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+}
+
+.search-submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-submit-btn:hover {
+    background: linear-gradient(135deg, #059669, #10b981);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+.error-message-placeholder {
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}

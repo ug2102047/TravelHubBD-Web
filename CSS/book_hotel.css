@@ -1,0 +1,277 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    margin: 0;
+    padding: 0;
+    color: #1e3a8a;
+}
+
+/* Booking Form Container */
+.booking-form-container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 50px;
+    background: linear-gradient(145deg, #ffffff, #eff6ff);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.booking-form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form-container h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.booking-form-container h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.booking-form-container .hotel-room-info {
+    text-align: center;
+    font-size: 1.2em;
+    color: #334155;
+    margin-bottom: 20px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 10px;
+}
+
+/* Price Summary */
+.booking-form-container .price-summary {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 25px;
+    background: linear-gradient(145deg, #f0f4f8, #e0f2fe);
+    border-radius: 12px;
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.price-summary p {
+    margin: 10px 0;
+    font-size: 1.25em;
+    color: #334155;
+}
+
+.price-summary strong {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    background: #ffffff;
+    color: #1e3a8a;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+    background: #f0f8ff;
+}
+
+/* Payment Instructions */
+.payment-instructions {
+    background: linear-gradient(145deg, #eff6ff, #dbeafe);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #bfdbfe;
+    font-size: 1.05em;
+    position: relative;
+}
+
+.payment-instructions::before {
+    content: "\f05a"; /* Font Awesome info-circle icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #3b82f6;
+    font-size: 1.5em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.payment-instructions strong {
+    color: #f97316;
+    font-weight: 700;
+}
+
+.payment-instructions ul {
+    padding-left: 30px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.payment-instructions ul li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.payment-instructions ul li::before {
+    content: "\f058"; /* Font Awesome check-circle icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #10b981;
+    position: absolute;
+    left: -25px;
+    top: 3px;
+}
+
+/* Payment Options */
+.payment-options-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-options-group label {
+    font-weight: 500;
+    color: #334155;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05em;
+}
+
+/* Error Messages */
+.error-messages-box {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.error-messages-box li {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #f97316;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1.05em;
+}
+
+.error-messages-box li .fas {
+    margin-right: 12px;
+    color: #f97316;
+}
+
+/* Date Inputs */
+.date-inputs {
+    display: flex;
+    gap: 25px;
+}
+
+.date-inputs .form-group {
+    flex: 1;
+}
+
+/* Submit Button */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booking-form-container {
+        padding: 30px;
+        margin: 30px 15px;
+    }
+
+    .booking-form-container h2 {
+        font-size: 2em;
+    }
+
+    .date-inputs {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-submit {
+        font-size: 1.1em;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-form-container {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+        font-size: 1em;
+    }
+}

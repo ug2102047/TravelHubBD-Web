@@ -1,0 +1,245 @@
+/*
+ * CSS for the Main Hotel Listing Page (all_hotels.php)
+ * Features a two-column layout with a filter sidebar and results grid.
+*/
+
+/* Main page layout container */
+.hotel-listing-page {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Fixed sidebar, flexible content */
+    gap: 30px;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    height: fit-content; /* Sidebar will not scroll with the page */
+    position: sticky;
+    top: 100px; /* Adjust based on navbar height */
+}
+
+.filters-sidebar h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3b82f6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="number"],
+.filter-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-range-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.amenities-checkboxes {
+    columns: 2;
+    gap: 10px;
+}
+
+.amenities-checkboxes div {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.amenities-checkboxes label {
+    font-weight: normal;
+    font-size: 0.9em;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.filter-submit-btn, .filter-reset-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.05em;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.filter-submit-btn {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+.filter-submit-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.filter-reset-btn {
+    background: linear-gradient(135deg, #64748b, #94a3b8);
+}
+.filter-reset-btn:hover {
+    background: linear-gradient(135deg, #475569, #64748b);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hotel Results Container */
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.results-header h2 {
+    font-size: 1.5em;
+    color: #1e3a8a;
+    margin: 0;
+}
+
+.sort-options label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.sort-options select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #bfdbfe;
+}
+
+/* Reusing grid and card styles from destination.css for consistency */
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.hotel-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2);
+}
+
+.hotel-card-link { text-decoration: none; color: inherit; }
+
+.hotel-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.hotel-card:hover .hotel-image img {
+    transform: scale(1.1);
+}
+
+.rating-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.hotel-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.hotel-info h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3em; margin-bottom: 10px; }
+.hotel-info p { font-size: 0.9em; color: #334155; margin-bottom: 8px; }
+.hotel-info .location { display: flex; align-items: center; gap: 5px; }
+.hotel-info .price { font-weight: bold; font-size: 1.1em; color: #10b981; }
+
+.star-rating-display { margin-top: 10px; color: #facc15; /* yellow-400 */ }
+.star-rating-display .filled { color: #facc15; }
+.star-rating-display .fa-star { color: #e2e8f0; } /* gray-200 for empty star */
+.star-rating-display .filled { color: #f59e0b; } /* amber-500 for filled star */
+
+.hotel-card-actions {
+    display: flex;
+    padding: 15px 20px;
+    border-top: 1px solid #eef2f7;
+    gap: 10px;
+}
+
+.hotel-card-actions .btn-details { flex-grow: 1; text-align: center; padding: 10px; background-color: #3b82f6; color: white; border-radius: 8px; text-decoration: none; }
+.hotel-card-actions .btn-wishlist { padding: 10px 12px; background-color: #ef4444; color: white; border-radius: 8px; text-decoration: none; }
+
+
+/* No Results Message */
+.no-results {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1.2em;
+    color: #475569;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hotel-listing-page {
+        grid-template-columns: 1fr; /* Stack sidebar on top of content */
+    }
+
+    .filters-sidebar {
+        position: static; /* Remove sticky position on mobile */
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,129 @@
+/* Hero Section & Carousel */
+.hero {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.carousel-item.active {
+    display: block;
+    z-index: 1;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30, 58, 138, 0.7);
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.carousel-control:hover {
+    background: #2563eb;
+}
+
+.carousel-control.prev {
+    left: 2rem;
+}
+
+.carousel-control.next {
+    right: 2rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigation Links Section */
+.nav-links-section {
+    padding: 4rem 2rem;
+    background: #ffffff;
+    text-align: center;
+}
+
+.nav-links-section h2 {
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.links-container a {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.links-container a:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+
+    .carousel-control {
+        font-size: 2rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .nav-links-section h2 {
+        font-size: 2rem;
+    }
+
+    .links-container {
+        gap: 1rem;
+    }
+
+    .links-container a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
