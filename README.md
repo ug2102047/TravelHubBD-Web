@@ -1,17 +1,40 @@
-# TravelHubBD
+# TravelHub Bangladesh - Web Platform 🇧🇩
 
-A comprehensive travel and tourism website for Bangladesh, featuring tourist spots, hotel bookings, and destination information.
+**Discover, Explore, and Book Your Perfect Bangladesh Adventure**
 
-## Features
+TravelHub Bangladesh is a comprehensive travel and tourism platform designed to showcase the natural beauty, cultural heritage, and hospitality of Bangladesh. From the serene beaches of Cox's Bazar to the lush tea gardens of Sylhet, from the historic sites of Dhaka to the majestic Sundarbans - explore it all in one place!
 
-- 🏨 Hotel booking system with search and filtering
-- 📍 Tourist spot information across all divisions of Bangladesh
-- 🗺️ Categorized destinations (Sea, Mountain, Forest, Historical Places, River, Worship Places)
-- 💝 Wishlist functionality
-- 👤 User profile management
-- 📧 Contact and support ticket system
-- ⭐ Hotel review system
-- 👨‍💼 Admin dashboard for booking management
+## ✨ Key Features
+
+### 🏨 **Hotel Booking System**
+
+- Advanced search and filtering by location, price, and amenities
+- Real-time availability checking
+- Detailed hotel information with multiple room types
+- Secure booking and confirmation process
+- Booking management dashboard
+
+### 📍 **Comprehensive Destination Guide**
+
+- **8 Divisions Covered**: Dhaka, Chittagong, Sylhet, Rajshahi, Khulna, Barisal, Rangpur, Mymensingh
+- **200+ Tourist Spots** with detailed information, images, and visitor reviews
+- **6 Categories**: Sea, Mountain, Forest, Historical Places, River, Worship Places
+- Interactive spot details with location, best visiting time, and activities
+
+### 👤 **User Experience**
+
+- 💝 Wishlist functionality to save favorite spots and hotels
+- ⭐ Review and rating system for hotels and destinations
+- 📧 Support ticket system for customer assistance
+- 🔐 Secure user authentication and profile management
+- 📱 Responsive design for mobile and desktop
+
+### 👨‍💼 **Admin Dashboard**
+
+- Complete booking management system
+- Customer message handling and response
+- Booking status updates and cancellation management
+- User activity monitoring
 
 ## Technologies Used
 
@@ -25,7 +48,7 @@ A comprehensive travel and tourism website for Bangladesh, featuring tourist spo
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/TravelHubBD.git
+   git clone https://github.com/ug2102047/TravelHubBD-Web.git
    ```
 
 2. **Move to XAMPP htdocs**
