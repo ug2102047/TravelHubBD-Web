@@ -72,3 +72,4 @@ $page_title = "Tourist Spots in " . $division_name;
     <?php include 'footer.php'; ?>
 </body>
 </html>
+
